@@ -1,0 +1,25 @@
+[Unit]
+Description=Moon GameHub Moon Isles
+After=network.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+StateDirectory=gamehub-moon-isles
+WorkingDirectory=/opt/moon-isles/current
+ExecStart=/opt/pokemon-showdown/runtime/current/bin/node src/server.ts
+Environment=NODE_ENV=production
+Environment=PORT=18910
+Environment=BASE_PATH=/gamehub/moon-isles
+Environment=PUBLIC_ORIGIN=https://release.moonl.cloud
+Environment=TRUST_PROXY=1
+Environment=DB_PATH=/var/lib/gamehub-moon-isles/rooms.sqlite
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

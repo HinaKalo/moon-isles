@@ -1,0 +1,4 @@
+redir /gamehub/moon-isles /gamehub/moon-isles/ 308
+handle /gamehub/moon-isles/* {
+	reverse_proxy 127.0.0.1:18910
+}
