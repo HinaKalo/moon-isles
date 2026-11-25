@@ -30,7 +30,7 @@
     "cookie": "0.7.2"
   },
   "devDependencies": {
-    "@types/node": "24.10.1",
+    "@types/node": "26.6.6",
     "playwright": "1.61.0",
     "typescript": "5.9.3",
     "vite": "8.3.8"
